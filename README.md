@@ -1,6 +1,7 @@
 Transformer
 =========================
-Attention is you need
+Attention is all you need
 
-Reference:
+Reference
+=========================
 https://arxiv.org/abs/1706.03762
