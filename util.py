@@ -14,7 +14,7 @@ from rdkit import rdBase
 
 torch.set_num_threads(1)
 rdBase.DisableLog('rdApp.error')
-AA = 'ARNDCQEGHILKMFPSTWYV'
+AA = 'ARNDCQEGHILKMFPSTWYVBXZ'
 dev = torch.device('cuda')
 torch.cuda.set_device(0)
 devices = [0]
