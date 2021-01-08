@@ -130,7 +130,7 @@ class Transformer(nn.Module):
                 score = (self.prj_word(dec_out) * self.x_logit_scale).softmax(dim=-1).data
                 output[:, step] = torch.multinomial(score[:, step-1, :], 1).view(-1).data
                 isEnd |= output[:, step] == self.voc_trg.tk2ix['EOS']
-                output[isEnd, step] = self.voc_trg.tk2ix['EOS']
+                output[isEnd, step] = self.voc_trg.tk2ix['_']
                 if isEnd.all(): break
         return output
 
